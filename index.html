@@ -1,1 +1,190 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CS 1300 Development</title>
+      <!-- import CSS styles -->
+      <link rel="stylesheet" href="styles.css" /> 
+    </head>
+  
+    <!-- page content goes into <body> -->
+      
+    <body>
+      <div class="topnav">
+        <a class="active" href="#about">About</a>
+        <a href="#background">Background</a>
+        <a href="#competitive-analysis">Competitive Analysis</a>
+        <a href="#bookstore">Bookstore</a>
+        <a href="#conclusion">Conclusion</a>
+      </div>
 
+      <div id = "about">
+        <h1>Development</h1>
+        <h3>Utilizing a reactive framework for frontend development to create
+          an aggregator and sorting/filtering functionalities for a 
+          small online bookstore.</h2>
+      </div>
+
+      <br>
+      
+      <div id = "background">
+        <h2>Background</h2>
+        <p>
+          As part of the research process, we complete a 
+          competitive analysis to understand how other
+          organizations are designing their aggregator and sorting/filtering 
+          functions.
+        </p>        
+      </div>
+
+      <br>
+
+      <div id = "competitive-analysis">
+        <h2>Competitive Analysis</h2>
+        <p>
+          To start, I selected 3 different websites with favoriting functions:
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/">Instagram:</a>
+              <br>
+                  <img class="pic" src="./assets/instagram.png" 
+                  alt="instagram's like functionality"/>
+            </li>
+            <br>
+            <li>
+              <a href="https://open.spotify.com/">Spotify:</a>
+              <br>
+                  <img class="pic" src="./assets/spotify.png" 
+                  alt="spotify's liked songs functionality"/>
+            </li>
+            <br>
+            <li>
+              <a href="https://www.amazon.com/">Amazon:</a>
+             <br>
+                  <img class="pic" src="./assets/amazon.png" 
+                  alt="amazon's favoriting (save for later) functionality"/>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Then, considering 5 factors:
+          <ol>
+            <li>Ability to sort by date added</li>
+            <li>Ability to sort items alphabetically</li>
+            <li>Ability to filter by content type</li>
+            <li>Filter/sort modal utilized</li>
+            <li>Filter/sort dropdown utilized</li>
+          </ol>
+          I conducted a competitive analysis with the 5 factors across 
+          the 3 chosen websites.
+        </p>
+
+        <p>The table below displays the results:</p>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>Amazon</th>
+            <th>Spotify</th>
+            <th>Instagram</th>
+          </tr>
+          <tr>
+            <td>Sort by date added: </td>
+            <td>no</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>Sort alphabetically: </td>
+            <td>no</td>
+            <td>yes</td>
+            <td>no</td>
+          </tr>
+          <tr>
+            <td>Filter by content type: </td>
+            <td>yes</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>Filter/sort modal: </td>
+            <td>no</td>
+            <td>no</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>Filter/sort dropdown: </td>
+            <td>no</td>
+            <td>yes</td>
+            <td>yes</td>
+          </tr>
+        </table>
+
+        <p>After conducting the competitive analysis, I found that Instagram's filter/sort 
+          modal was least successful because it decreased the user's flow and efficiency
+          by having to navigate away from the favorites list. Along the same 
+          reasoning, that also explains why the filter/sort dropdown that Spotify
+          employed was one of the most successful. Another very successful 
+          filtering method involved categorical filtering. Amazon utilized 
+          filtering based on type of item and Spotify utilized categorical filtering 
+          based on the type of genre. This allows the user to focus on what they are looking for 
+          and reduce irrelevant items displayed. I noticed that sorting alphabetically 
+          was only useful for Spotify song titles, which makes sense since these liked songs 
+          have official song titles, whereas cart items in Amazon or posts on Instagram 
+          don't have titles to alphabetically sort. Sorting by date 
+          also was only useful for Spotify and Instagram because 
+          there favorited items accumulate; however for cart items like Amazon, 
+          the purpose is to eventually move items from the save for later cart to checkout, 
+          so there is no real purpose to sort items saved for later by date added.
+        </p>
+        
+        <p>
+          Based on these observations and since I am implementing a shopping cart style aggregator, 
+          I will not utilize a sort by date functionality. Similar to Spotify songs, since books have 
+          proper titles they are referenced by, sorting by titles alphabetically would be successful. 
+          I would also like to implement filtering on authors because consumers tend to find their 
+          next book based on an author they already like. Lastly, since categorical filtering on content type was 
+          successful I would like to implement filtering based on book genre. 
+
+        </p>
+
+      </div>
+
+      <div id = "bookstore">
+        <h2>Final Site (Bookstore)</h2>
+        <p>
+          The final site developed was a bookstore with a shopping cart for users to add to before checking out. 
+          <br>
+          <a href="https://cs1300-development-3hhn-angelas-projects-43f9e3a7.vercel.app/">Bookstore Website Link</a>
+        </p>
+        <p>
+          <ul>
+            <li>Key elements include 3 options at the top to sort by titles alphabetically, filter by author, and/or filter by genre.</li>
+            <ul>
+              <li>All 3 filters/sorting features can be used together and if any of these dropdown menus are 
+                set back to their default state, the filter/sorting will reset. </li>
+            </ul>
+            <li>Each book item displayed features the title first, then author, price, genre, and an add to cart button.</li>
+            <li>Multiple copies of the same book can be added to the cart.</li>
+            <li>The cart is at the bottom of the page and displays the total price based on the books in the cart.</li>
+            <li>Each title in the cart is next to a remove button that will remove 1 copy of the book from the cart.</li>
+            <li>This way users can control if they want to remove all copies of a book or just one copy of a book from the cart.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div id = "conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          To conclude, conducting a competitive analysis really helped when brainstorming functionality 
+          to include in my own bookstore website. Looking at different sites with similar features allowed me to 
+          get a better idea of what decision choices were successful and unsuccessful. 
+        </p>
+        <p>After examining sorting, filtering, and aggregating on Amazon, Instagram, and Spotify, the final 
+          bookstore website was able to combine successful aspects from all 3 sites! 
+        </p>
+      </div>
+
+    </body>
+  </html>
