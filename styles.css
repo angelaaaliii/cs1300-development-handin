@@ -15,9 +15,6 @@ h2 {
 .topnav {
   background-color: #333;
   overflow: hidden;
-
-  /* position: fixed;
-  margin-top: -21px; */
 }
 
 /* Style the links inside the navigation bar */
@@ -37,7 +34,12 @@ h2 {
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+/* .topnav a.active {
   background-color: #9831d4;
   color: white;
+} */
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
 }
